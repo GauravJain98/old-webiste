@@ -19,6 +19,11 @@ var projects = [{
     info: "Implementation of Tetris game using canvas and requestanimationFrame",
     git: "https://github.com/GauravJain98/Tetris",
     tools: [" HTML", " CSS", " JavaScript"]
+},{
+    name: "Internship Portal",
+    info: "Used Django Admin, User, Authentication System and website Subdomaining",
+    madeFor: "W3Dev",
+    tools: [" HTML", " CSS", " JavaScript","Django","Redis","Memecache"]
 }];
 var skills = [{
     name: "C",
@@ -38,15 +43,6 @@ var skills = [{
 }, {
     name: "JavaScript",
     img: "JavaScript.png"
-}, {
-    name: "NodeJS",
-    img: "Node.js.png"
-}, {
-    name: "ExpressJS",
-    img: "Express.png"
-}, {
-    name: "MongoDB",
-    img: "MongoDB.png"
 }, {
     name: "Python",
     img: "Python.png"
@@ -77,8 +73,7 @@ var addSkillGrid = function(skills, id) {
     var listHtml = "";
     skills.forEach(function(el) {
         // listHtml = listHtml + '<div class="skill col-md-3 col-sm-3 col-xs-6"><div class="container-fluid tool"><h3 class="tool">' + el.name + '</h3></div></div>'
-        listHtml = listHtml + '<div class="float-left p-2 col-lg-3 col-md-4 col-sm-6 col-xs-6"><div class="thumbnail"><div class="category"><i class="icon-tag icon-white"></i> '
-        listHtml = listHtml + ' <a href="#">' + '</a></div><div class="caption"><h4>' + el.name + '</h4><img class=" tool-image img-fluid" src="assets/img/' + el.img + '" width=100%></div></div></div>';
+        listHtml = listHtml + '<div class="tool-contaior p-2 col-lg-3 col-md-3 col-sm-3 col-xs-3"><div class="caption"><h4>' + el.name + '</h4><img class=" tool-image img-fluid" src="assets/img/' + el.img + '" width=100%></div></div>';
     });
     document.getElementById(id).innerHTML = listHtml;
 }
@@ -95,5 +90,6 @@ var addProjectGrid = function(project, id) {
     });
     document.getElementById(id).innerHTML = listHtml;
 }
+
 addSkillGrid(skills, "skills-list");
 addProjectGrid(projects, "project-list");
