@@ -22,7 +22,10 @@ var projects = [{
 },{
     name: "Internship Portal",
     info: "Used Django Admin, User, Authentication System and website Subdomaining",
-    madeFor: "W3Dev",
+    madeFor: {
+        name:"W3Dev",
+        link:"https://w3dev.in/"
+    }
     tools: [" HTML", " CSS", " JavaScript","Django","Redis","Memecache"]
 }];
 var skills = [{
@@ -85,6 +88,9 @@ var addProjectGrid = function(project, id) {
         listHtml = listHtml + ' <a href="#">' + '</a></div><div class="caption"><h4>' + el.name + '</h4><p>' + el.info + '</p><p>'
         if (el.git.length) {
             listHtml = listHtml + '<a href="' + el.git + '" class="btn"> <i class="fa fa-github-alt"></i> Github </a>'
+        } 
+        if (el.madeFor.name.length) {
+            listHtml = listHtml + '<a href="' + el.madeFor.link + '" class="btn"> <i class="fa fa-briefcase"></i> '+el.madeFor.name + ' </a>'
         }
         listHtml = listHtml + '</p></div></div></div>';
     });
