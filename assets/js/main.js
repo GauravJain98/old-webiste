@@ -26,7 +26,6 @@ var projects = [{
         name:"W3Dev",
         link:"https://w3dev.in/"
     }
-    tools: [" HTML", " CSS", " JavaScript","Django","Redis","Memecache"]
 }];
 var skills = [{
     name: "C",
