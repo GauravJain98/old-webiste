@@ -72,6 +72,7 @@ var skills = [{
     name: "MySql",
     img: "mysql.png"
 }];
+
 var addSkillGrid = function(skills, id) {
     var listHtml = "";
     skills.forEach(function(el) {
@@ -89,6 +90,8 @@ var addProjectGrid = function(project, id) {
         listHtml = listHtml + ' <a href="#">' + '</a></div><div class="caption"><h4>' + el.name + '</h4><p>' + el.info + '</p><p>'
         if (typeof(el.git) !=='undefined') {
             listHtml = listHtml + '<a href="' + el.git + '" class="btn"> <i class="fa fa-github-alt"></i> Github </a>'
+        if (el.madeFor.name.length) {
+            listHtml = listHtml + '<a href="' + el.madeFor.link + '" class="btn"> <i class="fa fa-briefcase"></i> '+el.madeFor.name + ' </a>'
         }
         listHtml = listHtml + '</p></div></div></div>';
     });
