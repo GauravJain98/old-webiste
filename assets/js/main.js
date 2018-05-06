@@ -69,8 +69,8 @@ var skills = [{
     name: "Django",
     img: "django.png"
 }, {
-    name: "MySql",
-    img: "mysql.png"
+    name: "SQL",
+    img: "SQL.png"
 }];
 
 var addSkillGrid = function(skills, id) {
