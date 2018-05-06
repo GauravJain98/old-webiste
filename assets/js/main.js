@@ -91,7 +91,7 @@ var addProjectGrid = function(project, id) {
         if (typeof(el.git) !=='undefined') {
             listHtml = listHtml + '<a href="' + el.git + '" class="btn"> <i class="fa fa-github-alt"></i> Github </a>'
         }
-        if (typeof(el.madeFor) !=='undefined') {
+        if (typeof(el.madeFor)!=='undefined') {
             listHtml = listHtml + '<a href="' + el.madeFor.link + '" class="btn"> <i class="fa fa-briefcase"></i> '+el.madeFor.name + ' </a>'
         }
         listHtml = listHtml + '</p></div></div></div>';
